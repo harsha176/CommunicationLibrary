@@ -15,11 +15,11 @@ public interface ICommunicationService {
 	/**
 	 * This method runs email server as a daemon and each module gets initialized.
 	 * @param port      	email server listening port
-	 * @param passphrase	master key to open key store
 	 * @param isMuthAuthRequired if mutual authentication is required or not
 	 * @return 
+	 * @throws Exception 
 	 */
-	public int startService(int port, String passphrase, boolean isMutAuthRequired) throws InitalizationException;
+	public int startService() throws InitalizationException, Exception;
 	
 	/**
 	 * This method checks if the service is running.
@@ -47,10 +47,4 @@ public interface ICommunicationService {
 	 * @return
 	 */
 	public IRequestProcessor getRequestProcessor();
-
-	/**
-	 * get a default instance
-	 * @return
-	 */
-	public ICommunicationService getInstance();
 }

@@ -7,6 +7,5 @@ public interface IRequest {
 	public HashMap<String, String> getHeaders();
 	public byte[] getBody();
 	
-	public void parse(String raw_request);
 	public String getRawRequest();
 }
