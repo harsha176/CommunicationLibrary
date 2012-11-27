@@ -2,6 +2,8 @@ package edu.ncsu.csc574.emailserver.workflowmanager;
 
 import java.util.HashMap;
 
+import edu.ncsu.csc574.module.IResponse;
+
 public class Response implements IResponse {
 
 	private int statusCode;

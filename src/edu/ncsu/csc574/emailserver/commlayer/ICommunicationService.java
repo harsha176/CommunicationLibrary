@@ -1,7 +1,7 @@
 package edu.ncsu.csc574.emailserver.commlayer;
 
 import edu.ncsu.csc574.emailserver.exceptions.InitalizationException;
-import edu.ncsu.csc574.emailserver.workflowmanager.IRequestProcessor;
+import edu.ncsu.csc574.module.IRequestProcessor;
 
 
 //TODO: handle client-server server-server comm separately

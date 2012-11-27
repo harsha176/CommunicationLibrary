@@ -1,5 +1,7 @@
 package edu.ncsu.csc574.emailserver.commlayer;
 
+import edu.ncsu.csc574.module.IUserContext;
+
 public class UserContext implements IUserContext {
 	private String username;
 	private String domainName;

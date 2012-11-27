@@ -14,7 +14,7 @@ import com.ncsu.csc574.securitymanagement.ISecurityManager;
 import com.ncsu.csc574.securitymanagement.SecurityManagerFactory;
 
 import edu.ncsu.csc574.emailserver.exceptions.InitalizationException;
-import edu.ncsu.csc574.emailserver.workflowmanager.IRequestProcessor;
+import edu.ncsu.csc574.module.IRequestProcessor;
 
 /**
  * @author Harsha
@@ -25,6 +25,7 @@ public class CommunicationService implements ICommunicationService {
 	private ServerSocket serverListeningSocket;
 	private int port;
 	private boolean isMutAuthRequired;
+	private IRequestProcessor reqProcessor;
 	
 	/* Start service 
 	 * 1. Start server socket
@@ -83,8 +84,7 @@ public class CommunicationService implements ICommunicationService {
 	 */
 	@Override
 	public void registerModule(IRequestProcessor requestProcessor) {
-		// TODO Auto-generated method stub
-
+		this.reqProcessor = requestProcessor;
 	}
 
 	/* (non-Javadoc)
@@ -92,8 +92,7 @@ public class CommunicationService implements ICommunicationService {
 	 */
 	@Override
 	public IRequestProcessor getRequestProcessor() {
-		// TODO Auto-generated method stub
-		return null;
+		return reqProcessor;
 	}
 
 }
